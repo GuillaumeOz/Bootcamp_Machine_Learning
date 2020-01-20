@@ -1,24 +1,21 @@
 #!/usr/bin/python3
 
-import numpy as np
+#import numpy as np
 
-X = np.array([0, 15, -9, 7, 12, 3, -21])
-Y = np.array([2, 14, -13, 5, 12, 4, -19])
+#X = np.array([0, 15, -9, 7, 12, 3, -21])
+#Y = np.array([2, 14, -13, 5, 12, 4, -19])
 
 def dot(x, y):
-	ret = 0.0
-	dot_x = 0.0
-	dot_y = 0.0
-	count_x = 0
-	count_y = 0
-	for i in x:
-		dot_x = dot_x + i
-		count_x = count_x + 1
-	for j in y:
-		dot_y = dot_y + j
-		count_y = count_y + 1
-	if ((count_x == 0) or (count_y == 0)):
+	dot_ret = 0.0
+	if((x.size == 0) or (y.size == 0)):
 		return(None)
-	if (count_x != count_y):
+	if (x.size != y.size):
 		return(None)
-	return(ret)
+	dot_ret = sum([x * y for x, y in zip(x, y)])
+	# for i in x:
+	# 	for j in y:
+	# 		print(dot_ret)
+	# 		dot_ret = ((i * i) * (j * j))
+	return(dot_ret)
+
+#print(dot(X, Y))

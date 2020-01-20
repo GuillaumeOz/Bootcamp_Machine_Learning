@@ -6,6 +6,12 @@
 
 def sum_(x, f):
 	number = 0.0
+	if (x.size == 0):
+		return(None)
+	try:
+		f(x[0])
+	except ValueError:
+		return(None)
 	for y in x:
 		number = number + f(y)
 	return(number)
