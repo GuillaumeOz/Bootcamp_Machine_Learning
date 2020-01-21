@@ -12,10 +12,6 @@ def dot(x, y):
 	if (x.size != y.size):
 		return(None)
 	dot_ret = sum([x * y for x, y in zip(x, y)])
-	# for i in x:
-	# 	for j in y:
-	# 		print(dot_ret)
-	# 		dot_ret = ((i * i) * (j * j))
 	return(dot_ret)
 
 #print(dot(X, Y))
